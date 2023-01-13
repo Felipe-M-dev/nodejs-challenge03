@@ -1,4 +1,4 @@
-# Desafío - Like Me (Parte I)
+# Desafío - Like Me (Parte II)
 
 - Para realizar este desafío debes haber estudiado previamente todo el material disponible correspondiente a la unidad. </br>
 - Desarrollo desafío:
@@ -7,43 +7,21 @@
 
 ## Descripción
 
-La red social "Like Me" está apenas iniciando el proceso de desarrollo, se encuentra estudiando el mercado y analizando la competencia y ha descubierto que el éxito de esta industria se enfoca en los likes de los posts emitidos por los usuarios, por lo que decidió iniciar con el desarrollo de la lógica correspondiente a la creación de posts y a la interacción de likes que este puede tener.
+La red social “Like Me” sigue desarrollando su plataforma y ahora necesita permitir la interacción de likes y la eliminación de posts.
 
-En este desafío serás un desarrollador full stack developer de la empresa "Like Me" y deberás crear un servidor que disponibilice las rutas __GET__ y __POST__ para consultas y guardar los post en una base de datos PostgresSQL con el paquete pg.
+En esta segunda parte del desafío deberás:
 
-Para el desarrollo de este desafío dispondrás de un Apoyo Desafío - Like Me, que contiene una aplicación React con la interfaz que te mostramos en la siguiente imagen.
+1. Agregar una ruta PUT en una API REST y utilizarla para modificar registros en una tabla alojada en PostgreSQL __(4 puntos)__
+
+2. Agregar una ruta DELETE en una API REST y utilizarla para eliminar registros en una tabla alojada en PostgreSQL __(4 puntos)__
+
+3. Capturar los posibles errores en una consulta SQL realizada con el paquete pg usando la sentencia try catch __(2 puntos)__
+
+La siguiente imagen muestra la interacción de la aplicación cliente al registrar likes en un post.
 
 <p align="center">
-  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_01.png?raw=true?raw=true" alt="Imagen 01"><br>
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_06.png?raw=true?raw=true" alt="Imagen 06"><br>
 </p>
-
-La siguiente imagen muestra la interacción de la aplicación cliente al registrar un nuevo post.
-
-<p align="center">
-  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_02.png?raw=true?raw=true" alt="Imagen 02"><br>
-</p>
-
-Esta aplicación React de apoyo incluyte las consultas HTTP a un servidor local en el puerto 3000 con las rutas correspondientes al desafío en sus diferentes interacciones.
-
-Para iniciar con el desarrollo de este desafío, ocupa las siguientes instrucciones SQL para crear una base de datos __likeme__ y una tabla __post__.
-
-```sql
-CREATE DATABASE likeme;
-```
-
-```sql
-CREATE TABLE posts (id SERIAL, titulo VARCHAR(25), img VARCHAR(1000), descripcion VARCHAR(255), likes INT);
-```
-
-## Requerimientos
-
-1. Habilitar los __cors__ en el servidor utilizando el paquete de npm. __(2 puntos)__
-
-2. Usar el paquete __pg__ para conectarse e interactuar con la base de datos. __(2 puntos)__
-
-3. Crear una ruta GET con Express para devolver los registros de una tabla alojada en PostgreSQL. __(3 puntos)__
-
-4. Crear una ruta POST con Express que reciba y almacene en PostgreSQL un nuevo registro. __(3 puntos)__
 
   😊 ¡Mucho éxito!
   
@@ -75,14 +53,48 @@ CREATE TABLE posts (id SERIAL, titulo VARCHAR(25), img VARCHAR(1000), descripcio
   <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_03.png?raw=true?raw=true" alt="Imagen 03"><br>
 </p>
 
-2. Se valida registro correcto en base de datos PostgreSQL y en consola:
+2. Estado inicial en la base de datos:
 
 <p align="center">
-  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_04.png?raw=true?raw=true" alt="Imagen 04"><br>
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_07.png?raw=true?raw=true" alt="Imagen 07"><br>
 </p>
 
-3. Revisión de registro en endpoint `/posts`:
+3. Se dan 7 clicks en el like:
 
 <p align="center">
-  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_05.png?raw=true?raw=true" alt="Imagen 05"><br>
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_08.png?raw=true?raw=true" alt="Imagen 08"><br>
+</p>
+
+4. Estado en la base de datos:
+
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_09.png?raw=true?raw=true" alt="Imagen 09"><br>
+</p>
+
+5. Estado en el endpoint:
+
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_10.png?raw=true?raw=true" alt="Imagen 10"><br>
+</p>
+
+6. Se da click en la X para eliminar post:
+
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_11.png?raw=true?raw=true" alt="Imagen 11"><br>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_12.png?raw=true?raw=true" alt="Imagen 12"><br>
+</p>
+
+7. Estado en base de datos:
+
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_13.png?raw=true?raw=true" alt="Imagen 13"><br>
+</p>
+
+8. Estado en endpoint:
+
+<p align="center">
+  <img src="https://github.com/Felipe-M-dev/nodejs-challenge03/blob/main/desafio03_14.png?raw=true?raw=true" alt="Imagen 14"><br>
 </p>
